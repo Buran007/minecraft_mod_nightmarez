@@ -1,0 +1,31 @@
+# Указываем загрузчик модов
+modLoader="neoforge"
+# Указываем совместимую версию загрузчика
+loaderVersion="[1,)"
+# Лицензия твоего мода
+license="All Rights Reserved"
+
+# Секция для описания твоего мода
+[[mods]]
+# ID мода. Должен совпадать с MODID в главном классе
+modId="nightmarez"
+
+# Версия мода
+version="1.0.0"
+
+# Имя, которое будет отображаться в списке модов
+displayName="Nightmarez Mod"
+
+# Описание мода
+description='''
+A zombie apocalypse mod where only zombies spawn, day is turned to night, and they can break blocks.
+'''
+
+# Указываем, с какой версией Minecraft совместим мод
+[[dependencies.nightmarez]]
+modId="minecraft"
+mandatory=true
+# Убедись, что версия [1.20.1,) совпадает с той, что в твоем build.gradle
+versionRange="[1.20.1,)"
+ordering="NONE"
+side="BOTH"
