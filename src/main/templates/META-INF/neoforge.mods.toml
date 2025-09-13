@@ -1,17 +1,20 @@
-# Указываем загрузчик модов
-modLoader="neoforge"
-loaderVersion="[1,)"
-license="All Rights Reserved"
+# This is the primary configuration file for a NeoForge mod.
+modLoader = "neoforge"
+# The version range of the loader that this mod requires.
+# The single quotes are important.
+loaderVersion = '[21,)'
+license = "All Rights Reserved"
 
 [[mods]]
-modId="nightmarez"
-version="1.0.0"
-displayName="Nightmarez Mod"
-description='''A zombie apocalypse mod where only zombies spawn, day is turned to night, and they can break blocks.'''
+modId = "nightmarez"
+# The version variable is populated by the build script.
+version = "${version}"
+displayName = "NightmareZ"
+description = '''A new threat appears in the world of Minecraft.'''
 
-[[dependencies.nightmarez]]
-modId="minecraft"
-mandatory=true
-versionRange="[1.20.1,)"
-ordering="NONE"
-side="BOTH"
+[tool.neoforge.mods]
+nightmarez = {}
+
+[tool.neoforge.dependencies.nightmarez]
+neoforge = { versionRange = "[21,)", mandatory = true }
+minecraft = { versionRange = "[1.21,)", mandatory = true }
